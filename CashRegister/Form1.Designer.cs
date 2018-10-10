@@ -49,6 +49,7 @@
             this.totalOutput = new System.Windows.Forms.Label();
             this.tenderedInput = new System.Windows.Forms.TextBox();
             this.changeOutput = new System.Windows.Forms.Label();
+            this.blacklineLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLable
@@ -153,6 +154,7 @@
             this.calculatechangeButton.TabIndex = 12;
             this.calculatechangeButton.Text = "Calculate Change";
             this.calculatechangeButton.UseVisualStyleBackColor = true;
+            this.calculatechangeButton.Click += new System.EventHandler(this.calculatechangeButton_Click);
             // 
             // printreceiptButton
             // 
@@ -162,27 +164,31 @@
             this.printreceiptButton.TabIndex = 13;
             this.printreceiptButton.Text = "Print Receipt";
             this.printreceiptButton.UseVisualStyleBackColor = true;
+            this.printreceiptButton.Click += new System.EventHandler(this.printreceiptButton_Click);
             // 
             // subsInput
             // 
             this.subsInput.Location = new System.Drawing.Point(180, 54);
             this.subsInput.Name = "subsInput";
-            this.subsInput.Size = new System.Drawing.Size(100, 20);
+            this.subsInput.Size = new System.Drawing.Size(22, 20);
             this.subsInput.TabIndex = 14;
+            this.subsInput.Text = "0";
             // 
             // chipsInput
             // 
             this.chipsInput.Location = new System.Drawing.Point(180, 84);
             this.chipsInput.Name = "chipsInput";
-            this.chipsInput.Size = new System.Drawing.Size(100, 20);
+            this.chipsInput.Size = new System.Drawing.Size(22, 20);
             this.chipsInput.TabIndex = 15;
+            this.chipsInput.Text = "0";
             // 
             // cookiesInput
             // 
             this.cookiesInput.Location = new System.Drawing.Point(180, 115);
             this.cookiesInput.Name = "cookiesInput";
-            this.cookiesInput.Size = new System.Drawing.Size(100, 20);
+            this.cookiesInput.Size = new System.Drawing.Size(22, 20);
             this.cookiesInput.TabIndex = 16;
+            this.cookiesInput.Text = "0";
             // 
             // subtotalOutput
             // 
@@ -227,11 +233,20 @@
             this.changeOutput.TabIndex = 21;
             this.changeOutput.Text = "label4";
             // 
+            // blacklineLabel
+            // 
+            this.blacklineLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.blacklineLabel.Location = new System.Drawing.Point(21, 306);
+            this.blacklineLabel.Name = "blacklineLabel";
+            this.blacklineLabel.Size = new System.Drawing.Size(212, 14);
+            this.blacklineLabel.TabIndex = 22;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.blacklineLabel);
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.tenderedInput);
             this.Controls.Add(this.totalOutput);
@@ -282,6 +297,7 @@
         private System.Windows.Forms.Label totalOutput;
         private System.Windows.Forms.TextBox tenderedInput;
         private System.Windows.Forms.Label changeOutput;
+        private System.Windows.Forms.Label blacklineLabel;
     }
 }
 
