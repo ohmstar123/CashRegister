@@ -83,9 +83,48 @@ namespace CashRegister
             Pen drawPen = new Pen(Color.Black, 2);
             SolidBrush drawBrush = new SolidBrush(Color.White);
 
-            g.DrawRectangle(drawPen, 350, 60, 200, 100);
+            //square outline
+            g.DrawRectangle(drawPen, 350, 60, 400, 375);
+            g.FillRectangle(drawBrush, 350, 60, 400, 375);
+
+            //writing
+            Font writingFont = new Font("Consolas", 15, FontStyle.Bold);
+            SolidBrush writingBrush = new SolidBrush(Color.Black);
+
+            g.DrawString("Subway", writingFont, writingBrush, 510, 80);
+
+            writingFont = new Font("Consolas", 10, FontStyle.Bold);
+            g.DrawString("Order Number 9999", writingFont, writingBrush, 375, 120);
+            g.DrawString("October 15, 2018", writingFont, writingBrush, 375, 140);
+
+            g.DrawString("Footlong subs   x" + subsInput.Text + " @ " + subcost.ToString("C"), writingFont, writingBrush, 375, 180);
+            g.DrawString("Chips           x" + chipsInput.Text + " @ " + chipcost.ToString("C"), writingFont, writingBrush, 375, 200);
+            g.DrawString("Cookies         x" + cookiesInput.Text + " @ " + cookiecost.ToString("C"), writingFont, writingBrush, 375, 220);
+
+            g.DrawString("Subtotal             " + totalcost.ToString("C"), writingFont, writingBrush, 375, 260);
+            g.DrawString("Tax                  " + taxamount.ToString("C"), writingFont, writingBrush, 375, 280);
+            g.DrawString("Total                " + totalwithtax.ToString("C"), writingFont, writingBrush, 375, 300);
+
+            g.DrawString("Tendered             " + tenderedamount.ToString("C"), writingFont, writingBrush, 375, 340);
+            g.DrawString("Change               " + changeamount.ToString("C"), writingFont, writingBrush, 375, 360);
+
+            g.DrawString("Thank You, Come Again", writingFont, writingBrush, 375, 400);
+
+            neworderButton.Visible = true;
 
 
+
+
+        }
+
+        private void neworderButton_Click(object sender, EventArgs e)
+        {
+            Graphics g = this.CreateGraphics();
+            g.Clear(Color.GreenYellow);
+
+            subsInput.Text = "0";
+            chipsInput.Text = "0";
+            cookiesInput.Text = "0";
 
 
         }

@@ -50,6 +50,8 @@
             this.tenderedInput = new System.Windows.Forms.TextBox();
             this.changeOutput = new System.Windows.Forms.Label();
             this.blacklineLabel = new System.Windows.Forms.Label();
+            this.blacklineLabel2 = new System.Windows.Forms.Label();
+            this.neworderButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // titleLable
@@ -93,7 +95,7 @@
             // 
             // calculatetotalButton
             // 
-            this.calculatetotalButton.Location = new System.Drawing.Point(29, 181);
+            this.calculatetotalButton.Location = new System.Drawing.Point(24, 150);
             this.calculatetotalButton.Name = "calculatetotalButton";
             this.calculatetotalButton.Size = new System.Drawing.Size(124, 23);
             this.calculatetotalButton.TabIndex = 6;
@@ -104,7 +106,7 @@
             // subtotalLabel
             // 
             this.subtotalLabel.AutoSize = true;
-            this.subtotalLabel.Location = new System.Drawing.Point(26, 223);
+            this.subtotalLabel.Location = new System.Drawing.Point(26, 208);
             this.subtotalLabel.Name = "subtotalLabel";
             this.subtotalLabel.Size = new System.Drawing.Size(53, 13);
             this.subtotalLabel.TabIndex = 7;
@@ -113,7 +115,7 @@
             // taxLabel
             // 
             this.taxLabel.AutoSize = true;
-            this.taxLabel.Location = new System.Drawing.Point(26, 253);
+            this.taxLabel.Location = new System.Drawing.Point(26, 243);
             this.taxLabel.Name = "taxLabel";
             this.taxLabel.Size = new System.Drawing.Size(25, 13);
             this.taxLabel.TabIndex = 8;
@@ -122,7 +124,7 @@
             // totalLabel
             // 
             this.totalLabel.AutoSize = true;
-            this.totalLabel.Location = new System.Drawing.Point(26, 284);
+            this.totalLabel.Location = new System.Drawing.Point(26, 276);
             this.totalLabel.Name = "totalLabel";
             this.totalLabel.Size = new System.Drawing.Size(31, 13);
             this.totalLabel.TabIndex = 9;
@@ -193,29 +195,26 @@
             // subtotalOutput
             // 
             this.subtotalOutput.AutoSize = true;
-            this.subtotalOutput.Location = new System.Drawing.Point(180, 223);
+            this.subtotalOutput.Location = new System.Drawing.Point(180, 208);
             this.subtotalOutput.Name = "subtotalOutput";
-            this.subtotalOutput.Size = new System.Drawing.Size(35, 13);
+            this.subtotalOutput.Size = new System.Drawing.Size(0, 13);
             this.subtotalOutput.TabIndex = 17;
-            this.subtotalOutput.Text = "label1";
             // 
             // taxOutput
             // 
             this.taxOutput.AutoSize = true;
-            this.taxOutput.Location = new System.Drawing.Point(180, 253);
+            this.taxOutput.Location = new System.Drawing.Point(180, 243);
             this.taxOutput.Name = "taxOutput";
-            this.taxOutput.Size = new System.Drawing.Size(35, 13);
+            this.taxOutput.Size = new System.Drawing.Size(0, 13);
             this.taxOutput.TabIndex = 18;
-            this.taxOutput.Text = "label2";
             // 
             // totalOutput
             // 
             this.totalOutput.AutoSize = true;
-            this.totalOutput.Location = new System.Drawing.Point(180, 284);
+            this.totalOutput.Location = new System.Drawing.Point(180, 276);
             this.totalOutput.Name = "totalOutput";
-            this.totalOutput.Size = new System.Drawing.Size(35, 13);
+            this.totalOutput.Size = new System.Drawing.Size(0, 13);
             this.totalOutput.TabIndex = 19;
-            this.totalOutput.Text = "label3";
             // 
             // tenderedInput
             // 
@@ -229,23 +228,44 @@
             this.changeOutput.AutoSize = true;
             this.changeOutput.Location = new System.Drawing.Point(180, 390);
             this.changeOutput.Name = "changeOutput";
-            this.changeOutput.Size = new System.Drawing.Size(35, 13);
+            this.changeOutput.Size = new System.Drawing.Size(0, 13);
             this.changeOutput.TabIndex = 21;
-            this.changeOutput.Text = "label4";
             // 
             // blacklineLabel
             // 
             this.blacklineLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.blacklineLabel.Location = new System.Drawing.Point(21, 306);
+            this.blacklineLabel.Location = new System.Drawing.Point(21, 308);
             this.blacklineLabel.Name = "blacklineLabel";
-            this.blacklineLabel.Size = new System.Drawing.Size(212, 14);
+            this.blacklineLabel.Size = new System.Drawing.Size(259, 12);
             this.blacklineLabel.TabIndex = 22;
+            // 
+            // blacklineLabel2
+            // 
+            this.blacklineLabel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.blacklineLabel2.Location = new System.Drawing.Point(21, 180);
+            this.blacklineLabel2.Name = "blacklineLabel2";
+            this.blacklineLabel2.Size = new System.Drawing.Size(259, 12);
+            this.blacklineLabel2.TabIndex = 23;
+            // 
+            // neworderButton
+            // 
+            this.neworderButton.Location = new System.Drawing.Point(195, 415);
+            this.neworderButton.Name = "neworderButton";
+            this.neworderButton.Size = new System.Drawing.Size(85, 23);
+            this.neworderButton.TabIndex = 24;
+            this.neworderButton.Text = "New Order";
+            this.neworderButton.UseVisualStyleBackColor = true;
+            this.neworderButton.Visible = false;
+            this.neworderButton.Click += new System.EventHandler(this.neworderButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.GreenYellow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.neworderButton);
+            this.Controls.Add(this.blacklineLabel2);
             this.Controls.Add(this.blacklineLabel);
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.tenderedInput);
@@ -298,6 +318,8 @@
         private System.Windows.Forms.TextBox tenderedInput;
         private System.Windows.Forms.Label changeOutput;
         private System.Windows.Forms.Label blacklineLabel;
+        private System.Windows.Forms.Label blacklineLabel2;
+        private System.Windows.Forms.Button neworderButton;
     }
 }
 
