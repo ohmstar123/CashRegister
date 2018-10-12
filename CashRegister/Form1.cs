@@ -158,10 +158,6 @@ namespace CashRegister
             g.DrawString("Thank You, Come Again", writingFont, writingBrush, 375, 400);
 
             neworderButton.Visible = true;
-
-
-
-
         }
 
         private void neworderButton_Click(object sender, EventArgs e)
@@ -199,10 +195,6 @@ namespace CashRegister
 
             tryLabel1.Text = "";
             tryLabel2.Text = "";
-
-
-
-
         }
     }
 }
