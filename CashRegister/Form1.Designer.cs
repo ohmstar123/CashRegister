@@ -52,6 +52,8 @@
             this.blacklineLabel = new System.Windows.Forms.Label();
             this.blacklineLabel2 = new System.Windows.Forms.Label();
             this.neworderButton = new System.Windows.Forms.Button();
+            this.tryLabel1 = new System.Windows.Forms.Label();
+            this.tryLabel2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // titleLable
@@ -95,7 +97,7 @@
             // 
             // calculatetotalButton
             // 
-            this.calculatetotalButton.Location = new System.Drawing.Point(24, 150);
+            this.calculatetotalButton.Location = new System.Drawing.Point(24, 162);
             this.calculatetotalButton.Name = "calculatetotalButton";
             this.calculatetotalButton.Size = new System.Drawing.Size(124, 23);
             this.calculatetotalButton.TabIndex = 6;
@@ -133,7 +135,7 @@
             // tenderedLabel
             // 
             this.tenderedLabel.AutoSize = true;
-            this.tenderedLabel.Location = new System.Drawing.Point(26, 330);
+            this.tenderedLabel.Location = new System.Drawing.Point(26, 322);
             this.tenderedLabel.Name = "tenderedLabel";
             this.tenderedLabel.Size = new System.Drawing.Size(53, 13);
             this.tenderedLabel.TabIndex = 10;
@@ -142,7 +144,7 @@
             // changeLabel
             // 
             this.changeLabel.AutoSize = true;
-            this.changeLabel.Location = new System.Drawing.Point(26, 390);
+            this.changeLabel.Location = new System.Drawing.Point(26, 394);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(44, 13);
             this.changeLabel.TabIndex = 11;
@@ -150,7 +152,7 @@
             // 
             // calculatechangeButton
             // 
-            this.calculatechangeButton.Location = new System.Drawing.Point(29, 355);
+            this.calculatechangeButton.Location = new System.Drawing.Point(24, 369);
             this.calculatechangeButton.Name = "calculatechangeButton";
             this.calculatechangeButton.Size = new System.Drawing.Size(124, 23);
             this.calculatechangeButton.TabIndex = 12;
@@ -174,7 +176,6 @@
             this.subsInput.Name = "subsInput";
             this.subsInput.Size = new System.Drawing.Size(22, 20);
             this.subsInput.TabIndex = 14;
-            this.subsInput.Text = "0";
             // 
             // chipsInput
             // 
@@ -182,7 +183,6 @@
             this.chipsInput.Name = "chipsInput";
             this.chipsInput.Size = new System.Drawing.Size(22, 20);
             this.chipsInput.TabIndex = 15;
-            this.chipsInput.Text = "0";
             // 
             // cookiesInput
             // 
@@ -190,7 +190,6 @@
             this.cookiesInput.Name = "cookiesInput";
             this.cookiesInput.Size = new System.Drawing.Size(22, 20);
             this.cookiesInput.TabIndex = 16;
-            this.cookiesInput.Text = "0";
             // 
             // subtotalOutput
             // 
@@ -218,7 +217,7 @@
             // 
             // tenderedInput
             // 
-            this.tenderedInput.Location = new System.Drawing.Point(180, 330);
+            this.tenderedInput.Location = new System.Drawing.Point(180, 319);
             this.tenderedInput.Name = "tenderedInput";
             this.tenderedInput.Size = new System.Drawing.Size(100, 20);
             this.tenderedInput.TabIndex = 20;
@@ -226,7 +225,7 @@
             // changeOutput
             // 
             this.changeOutput.AutoSize = true;
-            this.changeOutput.Location = new System.Drawing.Point(180, 390);
+            this.changeOutput.Location = new System.Drawing.Point(180, 394);
             this.changeOutput.Name = "changeOutput";
             this.changeOutput.Size = new System.Drawing.Size(0, 13);
             this.changeOutput.TabIndex = 21;
@@ -234,7 +233,7 @@
             // blacklineLabel
             // 
             this.blacklineLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.blacklineLabel.Location = new System.Drawing.Point(21, 308);
+            this.blacklineLabel.Location = new System.Drawing.Point(21, 300);
             this.blacklineLabel.Name = "blacklineLabel";
             this.blacklineLabel.Size = new System.Drawing.Size(259, 12);
             this.blacklineLabel.TabIndex = 22;
@@ -242,7 +241,7 @@
             // blacklineLabel2
             // 
             this.blacklineLabel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.blacklineLabel2.Location = new System.Drawing.Point(21, 180);
+            this.blacklineLabel2.Location = new System.Drawing.Point(21, 189);
             this.blacklineLabel2.Name = "blacklineLabel2";
             this.blacklineLabel2.Size = new System.Drawing.Size(259, 12);
             this.blacklineLabel2.TabIndex = 23;
@@ -258,12 +257,34 @@
             this.neworderButton.Visible = false;
             this.neworderButton.Click += new System.EventHandler(this.neworderButton_Click);
             // 
+            // tryLabel1
+            // 
+            this.tryLabel1.AutoSize = true;
+            this.tryLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tryLabel1.ForeColor = System.Drawing.Color.Red;
+            this.tryLabel1.Location = new System.Drawing.Point(26, 146);
+            this.tryLabel1.Name = "tryLabel1";
+            this.tryLabel1.Size = new System.Drawing.Size(0, 13);
+            this.tryLabel1.TabIndex = 25;
+            // 
+            // tryLabel2
+            // 
+            this.tryLabel2.AutoSize = true;
+            this.tryLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tryLabel2.ForeColor = System.Drawing.Color.Red;
+            this.tryLabel2.Location = new System.Drawing.Point(26, 353);
+            this.tryLabel2.Name = "tryLabel2";
+            this.tryLabel2.Size = new System.Drawing.Size(0, 13);
+            this.tryLabel2.TabIndex = 26;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GreenYellow;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tryLabel2);
+            this.Controls.Add(this.tryLabel1);
             this.Controls.Add(this.neworderButton);
             this.Controls.Add(this.blacklineLabel2);
             this.Controls.Add(this.blacklineLabel);
@@ -320,6 +341,8 @@
         private System.Windows.Forms.Label blacklineLabel;
         private System.Windows.Forms.Label blacklineLabel2;
         private System.Windows.Forms.Button neworderButton;
+        private System.Windows.Forms.Label tryLabel1;
+        private System.Windows.Forms.Label tryLabel2;
     }
 }
 
