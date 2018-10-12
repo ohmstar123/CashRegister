@@ -10,6 +10,12 @@ using System.Windows.Forms;
 using System.Threading;
 using System.Media;
 
+/// <summary>
+/// Ohm Patel
+/// October 12, 2018
+/// Cash register at Subway
+/// </summary>
+
 namespace CashRegister
 {
    
@@ -72,7 +78,8 @@ namespace CashRegister
             catch
             {
                 tryLabel1.Text = "Please enter the amount of items you would like to buy";
-                Thread.Sleep(5000);
+                tryLabel1.Refresh();
+                Thread.Sleep(2000);
 
                 tryLabel1.Text = "";
             }
@@ -90,7 +97,11 @@ namespace CashRegister
             }
             catch
             {
-                tryLabel2.Text = "Please enter the amount of money you would like to give";  
+                tryLabel2.Text = "Please enter the amount of money you would like to give";
+                tryLabel2.Refresh();
+                Thread.Sleep(2000);
+
+                tryLabel2.Text = "";
             }
             
         }
